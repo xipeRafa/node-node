@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 
 class Server {
 
@@ -10,8 +11,9 @@ class Server {
 
         this.routes()
     }
-
+k
     middlewares() {
+        this.app.use( cors() ) // cross origin acces
         this.app.use( express.static('public') )
     }
 
